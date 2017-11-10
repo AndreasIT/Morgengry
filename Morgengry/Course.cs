@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    public class Course : Merchandise
+    public class Course : IValuable
     {
         public string Name;
         public int DurationInMinutes;
+        public double CourseHourValue;
 
         public override string ToString()
         {
@@ -25,6 +26,16 @@ namespace Morgengry
         {
             Name = inName;
             DurationInMinutes = inDurationinMinutes;
+        }
+        public double GetValue()
+        {
+            int noOfHours = DurationInMinutes / 60;
+
+            if (DurationInMinutes % 60 > 0)
+            {
+                noOfHours++;
+            }
+            return 875 * noOfHours;
         }
     }
 }

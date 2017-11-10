@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    public class Book : Merchandise
+    public class Book : Merchandise 
     {
      
         public string Title;
@@ -16,9 +16,9 @@ namespace Morgengry
         {
             return "ItemId: " + ItemId + ", Title: " + Title + ", Price: " + Price;
         }
-        public Book(string inItemId, string inTitle, double inPrice)
+        public Book(string inItemId, string inTitle, double inPrice) : base (inItemId)
         {
-            ItemId = inItemId;
+            //ItemId = inItemId;
             Title = inTitle;
             Price = inPrice;
         }
@@ -36,6 +36,10 @@ namespace Morgengry
             //title = "";
             //price = 0;
         }
+        public override double GetValue()
+        {
+            return Price;
+        }
     }
-    
+
 }
