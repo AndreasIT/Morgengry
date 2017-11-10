@@ -88,7 +88,7 @@ namespace Morgengry
         }
         public void Load ()
         {
-             
+              
         }
         public void Load (string filename)
         {
