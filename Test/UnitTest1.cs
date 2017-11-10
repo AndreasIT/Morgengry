@@ -59,10 +59,10 @@ namespace Test
         [TestMethod]
         public void AllCourseConstructorsWorkProperly()
         {
-            Assert.AreEqual("Name: Eufori med røg, Duration in Minutes: 0, Pris pr påbegyndt time: 825", c111.ToString());
+            Assert.AreEqual("Name: Eufori med røg, Duration in Minutes: 0, Pris pr påbegyndt time: 875", c111.ToString());
             c112.CourseHourValue = 1100;
             Assert.AreEqual("Name: Nuru Massage using Chia Oil, Duration in Minutes: 1, Pris pr påbegyndt time: 1100", c112.ToString());
-            Assert.AreEqual("Name: Mit møde med mig, Duration in Minutes: 157, Pris pr påbegyndt time: 825", c113.ToString());
+            Assert.AreEqual("Name: Mit møde med mig, Duration in Minutes: 157, Pris pr påbegyndt time: 875", c113.ToString());
         }
 
         [TestMethod]
@@ -81,7 +81,7 @@ namespace Test
 
             Assert.AreEqual("ItemId: X, Quality: high, Design: Dolphin", a13.ToString());
             Assert.AreEqual("ItemId: Y, Title: Smoke on the Water, Price: 376,45", b3.ToString());
-            Assert.AreEqual("Name: How to Ying-Yang, Duration in Minutes: 413, Pris pr påbegyndt time: 825", c112.ToString());
+            Assert.AreEqual("Name: How to Ying-Yang, Duration in Minutes: 413, Pris pr påbegyndt time: 875", c112.ToString());
         }
 
         [TestMethod]
@@ -106,7 +106,7 @@ namespace Test
             Assert.AreEqual(0.0, c111.GetValue());
             c112.CourseHourValue = 1100;
             Assert.AreEqual(1100.0, c112.GetValue());
-            Assert.AreEqual(2475.0, c113.GetValue());
+            Assert.AreEqual(2625.0, c113.GetValue());
         }
 
         [TestMethod]
@@ -121,9 +121,10 @@ namespace Test
             Book result = (Book)repo.GetValuable("Dummy");
             Assert.AreEqual(dummy, result);
 
-            Assert.AreEqual(3483.55, repo.GetTotalValue());
+            Assert.AreEqual(3683.55, repo.GetTotalValue());
         }
     }
+
 
 
 

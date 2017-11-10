@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    public class ValuableRepository
+    public class ValuableRepository : IPersistable
     {
         private List<IValuable> valuables = new List<IValuable>();
 
@@ -54,7 +54,7 @@ namespace Morgengry
                 if (oneValuable is Book)
                 {
                     Book oneBook = oneValuable as Book;
-                    totalValue += totalValue + oneBook.Price;
+                    totalValue += oneBook.GetValue();
                 }
                 if (oneValuable is Amulet)
                 {
@@ -77,6 +77,22 @@ namespace Morgengry
                 Value = Value + 1;
             }
             return Value;
+        }
+         public void Save()
+        {
+
+        }
+        public void Save (string filename)
+        {
+
+        }
+        public void Load ()
+        {
+
+        }
+        public void Load (string filename)
+        {
+
         }
     }
 }

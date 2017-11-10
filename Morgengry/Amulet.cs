@@ -49,17 +49,18 @@ namespace Morgengry
         }
         public override double GetValue()
         {
+            double result = 0;
             if (Quality == Level.medium)
             {
-                return 20.0;
+                return result = MediumQualityValue;
             }
             if (Quality == Level.low)
             {
-                return 12.5;
+                return result = LowQualityValue;
             }
             if (Quality == Level.high)
             {
-                return 27.5;
+                return result = HighQualityValue;
             }
             else
                 return 0;
